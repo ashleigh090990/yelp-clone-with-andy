@@ -12,4 +12,9 @@ feature 'reviewing' do
 		expect(current_path).to eq '/restaurants'
 		expect(page).to have_content('so so')
 	end
+
+	xscenario 'reviews are deleted when restaurant is deleted' do
+		visit '/restaurants'
+		click_link 'Review KFC, Badboi'
+	end
 end
